@@ -13,10 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>sp06-zuul</name>
     <description>Demo project for Spring Boot</description>
-    <properties>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
-    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
