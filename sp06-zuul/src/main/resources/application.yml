@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 3001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+# zuul网管路由转发规则
+zuul:
+  routes:
+    item-service: /item-service/**
+    user-service: /user-service/**
+    order-service: /order-service/**
+  retryable: true
+
+#对所有后台服务都有效,通用配置
+ribbon:
+  MaxAutoRetriesNextServer: 2
+
+#对指定的服务单独配置充实参数
+item-service:
+  ribbon:
+    MaxAutoRetriesNextServer: 1
+
+# 暴露 actuator 所有监控日志
+# http://localhost:3001/actuator
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

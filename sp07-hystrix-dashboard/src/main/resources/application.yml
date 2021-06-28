@@ -1,0 +1,14 @@
+# 仪表盘项目在系统中可以适应完全独立的项目
+# 不用连接注册中心
+# 8001 -item
+# 8101 -user
+# 8201 -order
+# 2001 -eureka
+# 3001 -zuul
+# 4001 -hystrix dashboard
+server:
+  port: 4001
+#允许从哪些服务器抓取日志
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost
