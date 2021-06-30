@@ -21,7 +21,7 @@ public class AccessFilter extends ZuulFilter {
     //位置序号
     @Override
     public int filterOrder() {
-
+        //
         return 6;
     }
     //判断针对当前请求，是否执行过滤代码
